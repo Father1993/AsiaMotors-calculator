@@ -2,7 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    background-color: #132f4d;
+    background-color: #2a3c50;
 }
 
 .container {
@@ -10,16 +10,17 @@
     margin: 0 auto;
     border: 5px solid #be3429;
     border-radius: 10px;
+    margin-top: 50px;
+}
+
+.logo {
+    max-width: 300px;
+    margin-bottom: 50px;
+    margin-top: 30px;
 }
 
 header {
     text-align: center;
-}
-
-header > h1 {
-    color: #7cade3;
-    margin-bottom: 50px;
-    margin-top: 30px;
 }
 
 #taxChina,
@@ -89,5 +90,14 @@ header > h1 {
     .main > input {
         width: 90%;
         height: 50px;
+    }
+
+    .main > input:hover {
+        transform: scale(1.05);
+    }
+
+    .container {
+        border: none;
+        margin-top: 30px;
     }
 }
