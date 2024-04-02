@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Сar delivery calculator</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body class="container">
+        <header class="">
+            <h1>ASIA MOTORS</h1>
+        </header>
+        <main class="main">
+            <input id="exchange" type="number" placeholder="Курс юаня" />
+            <label for="">
+                Новый автомобиль
+                <input id="newCars" type="checkbox" />
+            </label>
+            <input id="price" type="number" placeholder="Цена авто в Китае" />
+            <input
+                id="taxChina"
+                type="number"
+                placeholder="Налог на новый авто"
+            />
+            <input
+                id="expensesChina"
+                type="number"
+                placeholder="Расходы по Китаю"
+            />
+            <input id="taxRus" type="number" placeholder="Пошлина в РФ" />
+            <input id="expensesRus" type="number" placeholder="Расходы в РФ" />
+            <input
+                id="commission"
+                type="number"
+                placeholder="Комиссия компании"
+            />
+            <input
+                id="returnMoney"
+                type="number"
+                placeholder="Возврат налога"
+            />
+            <button id="sumBtn" class="sum-btn">Посчитать</button>
+            <input id="totalPrice" type="number" placeholder="Итого" />
+        </main>
+        <script defer src="./main.js"></script>
+    </body>
+</html>
