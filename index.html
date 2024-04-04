@@ -3,63 +3,101 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Сar delivery calculator</title>
+        <title>Asia Motors Calculator</title>
         <link
             rel="apple-touch-icon"
             sizes="180x180"
-            href="/apple-touch-icon.png"
+            href="./assets/apple-touch-icon.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="32x32"
-            href="/favicon-32x32.png"
+            href="./assets/favicon-32x32.png"
         />
         <link
             rel="icon"
             type="image/png"
             sizes="16x16"
-            href="/favicon-16x16.png"
+            href="./assets/favicon-16x16.png"
         />
-        <link rel="manifest" href="/site.webmanifest" />
-        <link rel="stylesheet" href="./style.css" />
+        <link rel="manifest" href="./assets/site.webmanifest" />
+        <link rel="stylesheet" href="./src/style.css" />
     </head>
     <body class="container">
         <header class="">
-            <img class="logo" src="./original.png" alt="AsiaMotors logo" />
+            <img
+                class="logo"
+                src="./assets/img/original.png"
+                alt="AsiaMotors logo"
+            />
         </header>
         <main class="main">
-            <input id="exchange" type="number" placeholder="Курс юаня" />
+            <span id="error-message" class="error"></span>
+            <input
+                id="exchange"
+                type="number"
+                placeholder="Курс юаня"
+                required
+            />
+
             <label for="">
                 Новый автомобиль
                 <input id="newCars" type="checkbox" />
             </label>
-            <input id="price" type="number" placeholder="Цена авто в Китае" />
+            <span>Цена авто в Китае</span>
             <input
-                id="taxChina"
+                id="price"
                 type="number"
-                placeholder="Налог на новый авто"
+                placeholder="Введите цену авто в Китае"
             />
+
+            <span>Расходы по Китаю</span>
             <input
                 id="expensesChina"
                 type="number"
-                placeholder="Расходы по Китаю"
+                placeholder="Введите расходы по Китаю"
             />
-            <input id="taxRus" type="number" placeholder="Пошлина в РФ" />
-            <input id="expensesRus" type="number" placeholder="Расходы в РФ" />
+            <span>Пошлина в РФ</span>
+            <input
+                id="taxRus"
+                type="number"
+                placeholder="Введите пошлину в РФ"
+            />
+            <span>Расходы в РФ</span>
+            <input
+                id="expensesRus"
+                type="number"
+                placeholder="Введите расходы в РФ"
+                value="95000"
+            />
+            <span>Комиссия компании</span>
             <input
                 id="commission"
                 type="number"
-                placeholder="Комиссия компании"
+                placeholder="Введите комиссию компании"
             />
+            <span id="taxChinaNew" class="tax-china"
+                >Налог на новый авто (считается автоматически, но можно ввести
+                свое число)</span
+            >
+            <input
+                id="taxChina"
+                type="number"
+                placeholder="Введите налог на новый авто если нужно"
+            />
+            <span id="taxChinaExp" class="tax-china"
+                >Возврат налога считается автоматически</span
+            >
             <input
                 id="returnMoney"
                 type="number"
-                placeholder="Возврат налога"
+                placeholder="Вводить ничего не нужно!"
+                readonly
             />
             <button id="sumBtn" class="sum-btn">Посчитать</button>
-            <input id="totalPrice" type="number" placeholder="Итого" />
+            <input id="totalPrice" type="text" placeholder="Итого" />
         </main>
-        <script defer src="./main.js"></script>
+        <script defer src="./src/main.js"></script>
     </body>
 </html>

@@ -63,9 +63,26 @@ header {
     outline: 5px solid #7cade3;
 }
 
+.main > span {
+    color: #e0e0e0;
+    margin-bottom: 5px;
+}
+
+.tax-china {
+    display: none;
+    color: #7cade3 !important;
+    font-size: 12px;
+}
+
+#error-message {
+    color: red;
+    font-size: 20px;
+    font-weight: bold;
+}
+
 .sum-btn {
     padding: 10px 20px;
-    background-color: whitesmoke;
+    background-color: #e61e25;
     font-weight: bold;
     margin-bottom: 20px;
     transition: transform 0.2s ease-in-out;
@@ -99,5 +116,10 @@ header {
     .container {
         border: none;
         margin-top: 30px;
+    }
+
+    .tax-china {
+        font-size: 10px;
+        font-weight: bold;
     }
 }
