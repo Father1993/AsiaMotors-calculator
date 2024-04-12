@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
         let taxChinaVal = 0
         let returnMoneyVal = 0
         if (isNewCar) {
-            // Курс для расчета нового авто + 0.35к
+            // Курс для расчета нового авто + 0.45к
             let newCarCursPlus = parseFloat(curs.value) + chinaPlus
             taxChinaVal = taxChina.value
                 ? parseFloat(taxChina.value)
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Курс + 0.20 копеек:', cursPlus)
 
         let plusChina = parseFloat(curs.value) + chinaPlus
-        console.log('Курс + 0.35 копеек:', plusChina)
+        console.log('Курс + 0.45 копеек:', plusChina)
 
         // Цена в рублях в Китае
         let priceRus = parseFloat(price.value) * cursPlus
@@ -117,14 +117,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
         let totalResult =
             priceRus + // Цена в рублях + 0.20к
-            taxChinaVal + // Налог на новый авто (Цена в Китае / 11,3 * курс + 0.35к), если чекбокс отмечен
-            expensesInChina + // Расходы по китаю + 0.35к
+            taxChinaVal + // Налог на новый авто (Цена в Китае / 11,3 * курс + 0.45к), если чекбокс отмечен
+            expensesInChina + // Расходы по китаю + 0.45к
             dutyWithInterest + // Пошлина в РФ + 2%
             expensesRusInRub + // Расходы в РФ (фикс 95.000р)
             commissionCompany - // Комиссия компании
             returnMoneyVal // отнимает от ИТОГО возврат НДС, если чекбокс отмечен
 
         console.log('Окончательная ЦЕНА В РУБЛЯХ ', totalResult)
+        console.log('########################################')
 
         // Вывожу результат в ИТОГО
         let totalResultFormatted = Number(
