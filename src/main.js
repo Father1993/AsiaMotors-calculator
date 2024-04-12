@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const plusCurs = Number(0.2)
 
     // Добавляю копейки к расходам по Китаю
-    const chinaPlus = Number(0.35)
+    const chinaPlus = Number(0.45)
 
     // Добавляю 2%
     const percent = Number(1.02)
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
             errorMessage.textContent = 'Введите курс!'
             return
         } else {
-            curs.style.outline = '' // Убираем красное обводку, если поле было заполнено
+            curs.style.outline = '' // Убираем красную обводку, если поле было заполнено
             errorMessage.textContent = '' // Очищаем сообщение об ошибке, если поле было заполнено
         }
         let price = document.getElementById('price')
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
             let newCarCursPlus = parseFloat(curs.value) + chinaPlus
             taxChinaVal = taxChina.value
                 ? parseFloat(taxChina.value)
-                : (parseFloat(price.value) / 11.3) * newCarCursPlus
+                : (parseFloat(price.value) / 11.3 + 1450) * newCarCursPlus
             console.log(
                 'Налог на приобретения нового авто в рублях: ',
                 taxChinaVal
