@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Добавляю копейки к курсу на цену в Китае
-    const plusCurs = Number(0.2)
+    const plusCurs = Number(0.3)
 
     // Добавляю копейки к расходам по Китаю
     const chinaPlus = Number(0.45)
@@ -84,9 +84,9 @@ document.addEventListener('DOMContentLoaded', function () {
             )
         }
 
-        // Курс + 0.20 по НЕМУ нужно считать
+        // Курс + 0.30 по НЕМУ нужно считать
         let cursPlus = parseFloat(curs.value) + plusCurs
-        console.log('Курс + 0.20 копеек:', cursPlus)
+        console.log('Курс + 0.30 копеек:', cursPlus)
 
         let plusChina = parseFloat(curs.value) + chinaPlus
         console.log('Курс + 0.45 копеек:', plusChina)
@@ -116,7 +116,7 @@ document.addEventListener('DOMContentLoaded', function () {
         console.log('Комиссия компании в рублях: ', commissionCompany)
 
         let totalResult =
-            priceRus + // Цена в рублях + 0.20к
+            priceRus + // Цена в рублях + 0.30к
             taxChinaVal + // Налог на новый авто (Цена в Китае / 11,3 * курс + 0.45к), если чекбокс отмечен
             expensesInChina + // Расходы по китаю + 0.45к
             dutyWithInterest + // Пошлина в РФ + 2%
