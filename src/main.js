@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Добавляю копейки к курсу на цену в Китае
-    const plusCurs = Number(0.6)
+    const plusCurs = Number(0.3)
 
     // Добавляю копейки к расходам по Китаю
     const chinaPlus = Number(0.6)
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Курс + 0.30 по НЕМУ нужно считать
         let cursPlus = parseFloat(curs.value) + plusCurs
-        console.log('Курс + 0.60 копеек:', cursPlus)
+        console.log('Курс + 0.30 копеек:', cursPlus)
 
         let plusChina = parseFloat(curs.value) + chinaPlus
         console.log('Курс + 0.60 копеек:', plusChina)
