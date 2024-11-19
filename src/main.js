@@ -86,10 +86,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
         // Курс + 0.30 по НЕМУ нужно считать
         let cursPlus = parseFloat(curs.value) + plusCurs
-        console.log('Курс + 0.30 копеек:', cursPlus)
+        console.log('Курс + 0.60 копеек:', cursPlus)
 
         let plusChina = parseFloat(curs.value) + chinaPlus
-        console.log('Курс + 0.45 копеек:', plusChina)
+        console.log('Курс + 0.60 копеек:', plusChina)
 
         // Цена в рублях в Китае
         let priceRus = parseFloat(price.value) * cursPlus
