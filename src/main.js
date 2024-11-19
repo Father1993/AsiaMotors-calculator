@@ -1,9 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Добавляю копейки к курсу на цену в Китае
-    const plusCurs = Number(0.3)
+    const plusCurs = Number(0.6)
 
     // Добавляю копейки к расходам по Китаю
-    const chinaPlus = Number(0.45)
+    const chinaPlus = Number(0.6)
 
     // Добавляю 2%
     const percent = Number(1.02)
